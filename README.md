@@ -1,3 +1,24 @@
-# Tomato Time
+# README
 
-Link to DTR: https://gist.github.com/nancylee713/5a27c10c27167c9a7098d14e5e5721cc
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
