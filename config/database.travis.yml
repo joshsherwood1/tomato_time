@@ -65,7 +65,7 @@ development:
 test:
   adapter: postgresql
   database: tomato_time_test
-  # username: travis
+  username: travis
   encoding: utf8
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
