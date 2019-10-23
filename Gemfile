@@ -29,6 +29,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'active_designer'
+  gem 'simplecov'
 end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
