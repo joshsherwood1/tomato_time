@@ -2,13 +2,12 @@ before_script:
   - psql -c 'create database tomato_time_test;' -U postgres
 
 language: ruby
+
 rvm:
   - 2.6.3
+  
 cache: bundler
-services:
-  - postgresql
-before_script:
-- psql -c 'create database travis_ci_test;' -U postgres
+
 script:
   - bundle exec rake
 
