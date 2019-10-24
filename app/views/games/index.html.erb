@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h4><%= @user.username %>'s Games</h4>
+  <br>
+  <br>
+    <section class="games">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Game</th>
+            <th scope="col">Category</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col">Number of Questions</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% @games.each do |game| %>
+              <section id='game-<%= game.id %>'>
+                  <tr>
+                    <td><%= game.custom_name %></td>
+                    <td><%= game.category %></td>
+                    <td><%= game.difficulty %></td>
+                    <td><%= game.number_of_questions %></td>
+                    <td>
+                        <p><%= button_to "Start Game"%></p>
+                        <p><%= button_to "Delete"%></p>
+                    </td>
+                  </tr>
+              </section>
+            <% end %>
+        </tbody>
+      </table>
+    </section>
+</div>
