@@ -1,7 +1,10 @@
 <div class="container">
-  <h2><%= @user.username %>'s Games</h2>
+  <center><h2><%= @user.username %>'s Games</h2></center>
+  <br>
+  <center><h3><%= button_to "Create New Game" %></h3></center>
   <br>
   <br>
+  <% unless @games.empty? %>
     <section class="games">
       <table class="table">
         <thead class="thead-light">
@@ -24,7 +27,7 @@
                     <td><%= game.number_of_questions %></td>
                     <td>
                         <p><%= button_to "Start Game"%></p>
-                        <p><%= button_to "Delete"%></p>
+                        <p><%= button_to "Delete", method: :delete %></p>
                     </td>
                   </tr>
               </section>
@@ -32,4 +35,5 @@
         </tbody>
       </table>
     </section>
+  <% end %>
 </div>
