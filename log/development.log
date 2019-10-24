@@ -19,3 +19,897 @@ Migrating to CreateUsers (20191023002522)
   [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5155993761376555440)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/mackenziehalliday/.rvm/gems/ruby-2.6.3/bin/rake:23)
+Started GET "/" for ::1 at 2019-10-23 22:14:39 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 371)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mackenziehalliday/turing/3module/projects/tomato_time/public/packs
+Completed 200 OK in 5690ms (Views: 5684.6ms | ActiveRecord: 0.0ms | Allocations: 1361284)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-23 22:14:54 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-23 22:28:12 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/merchants" for ::1 at 2019-10-23 22:28:57 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/merchants"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-10-23 22:29:02 -0600
+Processing by UsersController#new as HTML
+Completed 406 Not Acceptable in 36ms (ActiveRecord: 18.4ms | Allocations: 4986)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#new is missing a template for request formats: text/html):
+  
+actionpack (6.0.0) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.0) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-23 22:31:04 -0600
+Started GET "/" for ::1 at 2019-10-24 06:21:21 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 206)
+Completed 200 OK in 1115ms (Views: 1112.0ms | ActiveRecord: 0.0ms | Allocations: 1353221)
+
+
+Started GET "/google_sign_in/callback" for ::1 at 2019-10-24 06:21:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/google_sign_in/callback"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google/callback" for ::1 at 2019-10-24 06:23:18 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#googleAuth as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1198)
+
+
+  
+NoMethodError (undefined method `info' for nil:NilClass):
+  
+app/models/user.rb:7:in `from_omniauth'
+app/controllers/sessions_controller.rb:9:in `googleAuth'
+Started GET "/auth/google/callback" for ::1 at 2019-10-24 06:24:15 -0600
+Processing by SessionsController#googleAuth as HTML
+Completed 500 Internal Server Error in 22431ms (ActiveRecord: 0.0ms | Allocations: 25543)
+
+
+  
+NoMethodError (undefined method `info' for nil:NilClass):
+  
+app/models/user.rb:8:in `from_omniauth'
+app/controllers/sessions_controller.rb:9:in `googleAuth'
+Started GET "/auth/google/callback" for ::1 at 2019-10-24 06:24:44 -0600
+Processing by SessionsController#googleAuth as HTML
+Completed 500 Internal Server Error in 2037418ms (ActiveRecord: 0.0ms | Allocations: 550479)
+
+
+  
+NoMethodError (undefined method `info' for nil:NilClass):
+  
+app/models/user.rb:8:in `from_omniauth'
+app/controllers/sessions_controller.rb:10:in `googleAuth'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 06:58:50 -0600
+Started GET "/auth/google_oauth2/callback" for ::1 at 2019-10-24 07:14:42 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.9.0) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.9.0) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.9.0) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:491:in `fail!'
+omniauth-oauth2 (1.6.0) lib/omniauth/strategies/oauth2.rb:71:in `callback_phase'
+omniauth (1.9.0) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.0) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.0) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.0) lib/omniauth/builder.rb:64:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (280.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tomato_time_development"[0m
+  [1m[35m (216.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tomato_time_test"[0m
+  [1m[35m (583.2ms)[0m  [1m[35mCREATE DATABASE "tomato_time_development" ENCODING = 'unicode'[0m
+  [1m[35m (430.3ms)[0m  [1m[35mCREATE DATABASE "tomato_time_test" ENCODING = 'utf8'[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5155993761376555440)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20191023002522)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "google_token" character varying, "google_refresh_token" character varying, "email" character varying)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191023002522"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (11.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (10.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-24 14:57:57.927551"], ["updated_at", "2019-10-24 14:57:57.927551"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5155993761376555440)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 08:59:24 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google/callback" for ::1 at 2019-10-24 08:59:54 -0600
+Processing by SessionsController#googleAuth as HTML
+Started GET "/auth/google/callback" for ::1 at 2019-10-24 09:02:59 -0600
+Processing by SessionsController#googleAuth as HTML
+Started GET "/auth/github" for ::1 at 2019-10-24 09:03:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/auth/github"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:08:03 -0600
+Completed 500 Internal Server Error in 1290717ms (ActiveRecord: 0.0ms | Allocations: 330814)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+app/controllers/sessions_controller.rb:7:in `googleAuth'
+Completed 500 Internal Server Error in 1106369ms (ActiveRecord: 0.0ms | Allocations: 282164)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+app/controllers/sessions_controller.rb:7:in `googleAuth'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:34:11 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:36:20 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:37:27 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:57:28 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 09:59:23 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:01:36 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:08:31 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:12:48 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-10-24 10:21:46 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 206)
+Completed 200 OK in 1049ms (Views: 1046.0ms | ActiveRecord: 0.0ms | Allocations: 1353152)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:22:48 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:26:22 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:26:39 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:31:03 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 10:35:38 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2/callback?state=65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5&code=4%2FsQHcUYotROZjAm4HLg0wR8uEKe2MfNEqJyFWv3otYkPzM5Df-GJtUu0yrRjFi_w4WxiQbrmbwtguaDWvgA-eATc&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&session_state=77f84fa74919f2aeda18aa8443c5c6b7cc213499..2d1a&prompt=consent" for ::1 at 2019-10-24 10:35:43 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5", "code"=>"4/sQHcUYotROZjAm4HLg0wR8uEKe2MfNEqJyFWv3otYkPzM5Df-GJtUu0yrRjFi_w4WxiQbrmbwtguaDWvgA-eATc", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "session_state"=>"77f84fa74919f2aeda18aa8443c5c6b7cc213499..2d1a", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Completed 500 Internal Server Error in 42470ms (ActiveRecord: 9.4ms | Allocations: 40752)
+
+
+  
+NoMethodError (undefined method `name=' for #<User:0x00007fc6cd3cb310>):
+  
+app/models/user.rb:9:in `block in from_omniauth'
+app/models/user.rb:8:in `from_omniauth'
+app/controllers/sessions_controller.rb:10:in `googleAuth'
+Started GET "/auth/google_oauth2/callback?state=65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5&code=4%2FsQH1vsD3EBWb631_iYTZD-Gph7G2-di5YniPh0blwxiEZuWPeEiaAQTYSPLLosJ2QK8RfXBvFhDOPDM_GxEzJDs&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&session_state=c7e51b69eaa4a887f28e97ab4e31754e9c4761a1..d49b&prompt=consent" for ::1 at 2019-10-24 10:41:43 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5", "code"=>"4/sQH1vsD3EBWb631_iYTZD-Gph7G2-di5YniPh0blwxiEZuWPeEiaAQTYSPLLosJ2QK8RfXBvFhDOPDM_GxEzJDs", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "session_state"=>"c7e51b69eaa4a887f28e97ab4e31754e9c4761a1..d49b", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Completed 500 Internal Server Error in 262144ms (ActiveRecord: 0.7ms | Allocations: 32578)
+
+
+  
+NoMethodError (undefined method `name=' for #<User:0x00007fc6d11c9428>):
+  
+app/models/user.rb:9:in `block in from_omniauth'
+app/models/user.rb:8:in `from_omniauth'
+app/controllers/sessions_controller.rb:10:in `googleAuth'
+Started GET "/auth/google_oauth2/callback?state=65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5&code=4%2FsQHcsYAqYm_4XyUrxt9lv_0sLS0JJ2TtbwchNjO6AEme4JV-i-ftejDdYl6eRBogwCG8CsZxnnR88HSBmW4G06s&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&session_state=b095a112942cda5c54257a45685c30dde650ea7e..b8fe&prompt=consent" for ::1 at 2019-10-24 10:46:12 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5", "code"=>"4/sQHcsYAqYm_4XyUrxt9lv_0sLS0JJ2TtbwchNjO6AEme4JV-i-ftejDdYl6eRBogwCG8CsZxnnR88HSBmW4G06s", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "session_state"=>"b095a112942cda5c54257a45685c30dde650ea7e..b8fe", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Completed 500 Internal Server Error in 3713ms (ActiveRecord: 6.8ms | Allocations: 58797)
+
+
+  
+NoMethodError (undefined method `log_in' for #<SessionsController:0x00007fc6d1411370>
+Did you mean?  login_url):
+  
+app/controllers/sessions_controller.rb:12:in `googleAuth'
+Started GET "/auth/google_oauth2/callback?state=65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5&code=4%2FsQGw-VHvDHF5h1uqJFlMddnI3QwvKjR7pVMJr9WXt9_UzMaKkVmXdJnEAImzBD8R9xgoSBH01v6mlisAMP32npk&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&session_state=15e5464a1445c074be33e6e8313bd88ee9089a1f..a7d9&prompt=consent" for ::1 at 2019-10-24 10:46:48 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"65007b77def3d01e0decfc928ac0cb631dc0a909e8bdd9b5", "code"=>"4/sQGw-VHvDHF5h1uqJFlMddnI3QwvKjR7pVMJr9WXt9_UzMaKkVmXdJnEAImzBD8R9xgoSBH01v6mlisAMP32npk", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "session_state"=>"15e5464a1445c074be33e6e8313bd88ee9089a1f..a7d9", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Completed 500 Internal Server Error in 418978ms (ActiveRecord: 4.1ms | Allocations: 143701)
+
+
+  
+NoMethodError (undefined method `log_in' for #<SessionsController:0x00007fc6d1428a70>
+Did you mean?  login_url):
+  
+app/controllers/sessions_controller.rb:12:in `googleAuth'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 11:07:45 -0600
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2/callback?state=96ce4bd619dd085b21c59bdf1c7d16bbbaa47fd418a6f87a&code=4/sQHk0Go1jcMeh2d9vUuBgG2CnZk7tl0onavOtlv9Pu8LJqfxLjWFXymZeWJHofOzyYMsF7CmxXXNKInlsRgRvEA&scope=email+profile+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email&authuser=0&session_state=f1e8399a02200e86009938cf0839befc663e1755..6c15&prompt=none" for ::1 at 2019-10-24 11:07:46 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"96ce4bd619dd085b21c59bdf1c7d16bbbaa47fd418a6f87a", "code"=>"4/sQHk0Go1jcMeh2d9vUuBgG2CnZk7tl0onavOtlv9Pu8LJqfxLjWFXymZeWJHofOzyYMsF7CmxXXNKInlsRgRvEA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "session_state"=>"f1e8399a02200e86009938cf0839befc663e1755..6c15", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 7311ms (ActiveRecord: 4.8ms | Allocations: 26158)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 11:07:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 11:16:07 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2/callback?state=ab0761e5fc8622b3214373c9c3ad2d4e07c313cd3e462543&code=4/sQFGwUOzuGoCwXzrcA4muKRDS47zTzbUAMe7eO7CHuX86toxcuQU8tx2QzN5BH_VD0ghaD0FAckCZ_iPLbnabGI&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=8fd3ffdb3d4cc418e9b2deb165ab1ebd416cb70c..1223&prompt=none" for ::1 at 2019-10-24 11:16:08 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"ab0761e5fc8622b3214373c9c3ad2d4e07c313cd3e462543", "code"=>"4/sQFGwUOzuGoCwXzrcA4muKRDS47zTzbUAMe7eO7CHuX86toxcuQU8tx2QzN5BH_VD0ghaD0FAckCZ_iPLbnabGI", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"8fd3ffdb3d4cc418e9b2deb165ab1ebd416cb70c..1223", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 38497ms (ActiveRecord: 4.7ms | Allocations: 143732)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 11:16:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 11:17:12 -0600
+Started GET "/auth/google_oauth2/callback?state=93ce37c36eb2fd7d99c3601f661eafa050953429dbca04dd&code=4/sQGTh0PzqE2UJ6FifByqJPJYrEznADC2EcI9p40WJj60HwBvJxi6rSshZB_Y214-vIstA-EsXwnhkjhCsefSMeY&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=7b94970c75326901c8797865b7d03e0ca42056e9..a49f&prompt=none" for ::1 at 2019-10-24 11:17:13 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"93ce37c36eb2fd7d99c3601f661eafa050953429dbca04dd", "code"=>"4/sQGTh0PzqE2UJ6FifByqJPJYrEznADC2EcI9p40WJj60HwBvJxi6rSshZB_Y214-vIstA-EsXwnhkjhCsefSMeY", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"7b94970c75326901c8797865b7d03e0ca42056e9..a49f", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 25421ms (ActiveRecord: 0.4ms | Allocations: 29380)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 11:17:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 11:17:51 -0600
+Started GET "/auth/google_oauth2/callback?state=688e05ed7dc9d47bc5846552282c95e7dbc7a3f9586eb8cc&code=4/sQEVQogqrgS04_7MQtk7wBx1-n8jYfSDYRmYO9PVMNM2pESK7Azd1M48ne8npnLvdNyit8oa52CQFwy4FielXf4&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=3dba690ad55cbc0bfe3318b481b162ebfb4db29a..1b0c&prompt=none" for ::1 at 2019-10-24 11:17:52 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"688e05ed7dc9d47bc5846552282c95e7dbc7a3f9586eb8cc", "code"=>"4/sQEVQogqrgS04_7MQtk7wBx1-n8jYfSDYRmYO9PVMNM2pESK7Azd1M48ne8npnLvdNyit8oa52CQFwy4FielXf4", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"3dba690ad55cbc0bfe3318b481b162ebfb4db29a..1b0c", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "google_token", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Mack Halliday"], ["google_token", "ya29.ImOiB_MdVyJ_bMCnV7KwqRJp4hQ9uXJZt4GsgVQ_AmMuRehK48XbQY5KonlfKxZDJfHjg2WnifnAMYL82YkMsxCb_UiYQpOSZ7jLJij5o0vlbkJIohl5rEA8lXRzI9dQEqWCFjY"], ["email", "mackenzie.halliday@gmail.com"]]
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 11381ms (ActiveRecord: 11.7ms | Allocations: 31657)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 11:18:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-24 12:26:47 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 206)
+Completed 200 OK in 1056ms (Views: 1052.7ms | ActiveRecord: 0.0ms | Allocations: 1353168)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 12:26:53 -0600
+Started GET "/auth/google_oauth2/callback?state=d976b245407bef0f3f0f0592b3231f5874adf27187a1f966&code=4/sgEl_kNJSDo3PxvWFjo84I8QO6qXwi-An4uPigpTQpzsla6IynacSMgeYULLvRMmI1Fod_p9QGaEyEE26HNUFos&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=ff2b26e1e743405f0dde0f4ebe52d8a7e243c95c..23e1&prompt=none" for ::1 at 2019-10-24 12:26:54 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"d976b245407bef0f3f0f0592b3231f5874adf27187a1f966", "code"=>"4/sgEl_kNJSDo3PxvWFjo84I8QO6qXwi-An4uPigpTQpzsla6IynacSMgeYULLvRMmI1Fod_p9QGaEyEE26HNUFos", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"ff2b26e1e743405f0dde0f4ebe52d8a7e243c95c..23e1", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1 WHERE "users"."id" = $2[0m  [["google_token", "ya29.ImOpB8VLJZs3d3pc8a4dnGtuIC5FSv2yH3gYJbnp2qmn2A76bUa2BAu-8Gzm4SoZRgN0FD-q277g0LhttgxWZZZm2dDddn9XlVoVGNarwj_8UwfQPhkmlVqHm-gpfGnWF8UfEaQ"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 8613ms (ActiveRecord: 12.5ms | Allocations: 33147)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:27:02 -0600
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 230.1ms | Allocations: 133109)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms | Allocations: 133951)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fa504ca74b0>:0x00007fa504ce4720>
+Did you mean?  super):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= user.name %>
+  
+app/views/users/show.html.erb:2
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 12:36:35 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/auth/google_oauth2/callback?state=9c97bb92506c1d66382e85f721cd4072b3319005000ba095&code=4/sgHdFiVtNazAwpmIUx1tdRG3TkjTX3Hw8pIe6Jymn9llXKdyL0xpLdM4zRWRaOsZKFfeBYzWZOFfIuZ-6REVRiE&scope=email+profile+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email&authuser=0&session_state=846ff619c76d461323d12c7af33197fa4f7e6ea7..0a24&prompt=none" for ::1 at 2019-10-24 12:36:35 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"9c97bb92506c1d66382e85f721cd4072b3319005000ba095", "code"=>"4/sgHdFiVtNazAwpmIUx1tdRG3TkjTX3Hw8pIe6Jymn9llXKdyL0xpLdM4zRWRaOsZKFfeBYzWZOFfIuZ-6REVRiE", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "session_state"=>"846ff619c76d461323d12c7af33197fa4f7e6ea7..0a24", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+  [1m[35m (20.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1 WHERE "users"."id" = $2[0m  [["google_token", "ya29.ImOpB5x31yw4NcW-DjSJMaDiHbVaXR2tIcKnkV-2Dv91Y6Dc8RCYQGfX234ViUv2UHq0g-304VQph1f_2MGbtwkQ-3AenFLwkH7dMIKkdv6JH_OUZAvGQfZcSzRee42jjmG77T4"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 58ms (ActiveRecord: 31.2ms | Allocations: 7240)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:36:36 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 351.4ms | Allocations: 135397)
+Completed 500 Internal Server Error in 388129ms (ActiveRecord: 0.3ms | Allocations: 170973)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007fc49bc98210>:0x00007fc49c428b10>
+Did you mean?  @current_user):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= current_user.username %>
+  
+app/views/users/show.html.erb:2
+Started GET "/profile" for ::1 at 2019-10-24 12:43:17 -0600
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1317)
+Completed 500 Internal Server Error in 5434ms (ActiveRecord: 0.0ms | Allocations: 8556)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= @current_user.username %>
+  
+app/views/users/show.html.erb:2
+Started GET "/profile" for ::1 at 2019-10-24 12:43:52 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 12:43:57 -0600
+Started GET "/auth/google_oauth2/callback?state=3659b4f4e7495a971ba6a23bbbfcc18b84b3b0d635ef0d31&code=4/sgGPIOuhpyHllnOhpdjGp-7uV2aQPX3xpdQq3Q2Gj7vSLKW9DEPZ_L0r1fQJQA1GaFLcGpQcMx_uqayxs2CG1kY&scope=email+profile+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email&authuser=0&session_state=394d7dfe534e2f4c3ee6ac4cd114a9c6d7d35b60..d3bd&prompt=none" for ::1 at 2019-10-24 12:43:58 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"3659b4f4e7495a971ba6a23bbbfcc18b84b3b0d635ef0d31", "code"=>"4/sgGPIOuhpyHllnOhpdjGp-7uV2aQPX3xpdQq3Q2Gj7vSLKW9DEPZ_L0r1fQJQA1GaFLcGpQcMx_uqayxs2CG1kY", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "session_state"=>"394d7dfe534e2f4c3ee6ac4cd114a9c6d7d35b60..d3bd", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1 WHERE "users"."id" = $2[0m  [["google_token", "ya29.ImOpB609DwI-m7dKiHG0SbhOlNqmDBw1Ec_h_3gft71qcSi2_K_nEAoio1WF4O1DMetewIEY6tR2xHglid244qG1w1C9DDbOlHBy8B3GM_mliJ9rfIdlb6-ZcfTAQv6akSPwgq8"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 20ms (ActiveRecord: 7.9ms | Allocations: 7232)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:43:58 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 290.5ms | Allocations: 134500)
+Completed 500 Internal Server Error in 53724ms (ActiveRecord: 0.3ms | Allocations: 152423)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007ff87aaad410>:0x00007ff87aad7440>
+Did you mean?  @current_user):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= current_user.username %>
+  
+app/views/users/show.html.erb:2
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 257.4ms | Allocations: 132568)
+Completed 500 Internal Server Error in 133836ms (ActiveRecord: 0.0ms | Allocations: 674150)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00007ff87aaad410>:0x00007ff87a67eec0>
+Did you mean?  current_page?):
+    1: <h2> Profile Placeholder </h2>
+    2: <% binding.pry %>
+  
+app/views/users/show.html.erb:2
+Started GET "/profile" for ::1 at 2019-10-24 12:46:11 -0600
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+Started GET "/profile" for ::1 at 2019-10-24 12:46:44 -0600
+  Rendered users/show.html.erb within layouts/application (Duration: 34552.1ms | Allocations: 153662)
+Completed 200 OK in 39573ms (Views: 35509.7ms | ActiveRecord: 0.0ms | Allocations: 1512048)
+
+
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Started GET "/profile" for ::1 at 2019-10-24 12:48:12 -0600
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 27833.5ms | Allocations: 153693)
+Completed 200 OK in 116380ms (Views: 27839.9ms | ActiveRecord: 10.0ms | Allocations: 295140)
+
+
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 28282.5ms | Allocations: 23252)
+Completed 200 OK in 35774ms (Views: 28293.4ms | ActiveRecord: 4.4ms | Allocations: 41882)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:49:40 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+Started GET "/profile" for ::1 at 2019-10-24 12:54:40 -0600
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 110)
+Completed 200 OK in 390719ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 37098)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:56:10 -0600
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1237)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1678)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= @user.username %>
+  
+app/views/users/show.html.erb:2
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1237)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1678)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= @user.username %>
+  
+app/views/users/show.html.erb:2
+Started GET "/profile" for ::1 at 2019-10-24 12:56:44 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 2.5ms | Allocations: 8307)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:59:10 -0600
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1237)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1743)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h2> Profile Placeholder </h2>
+    2: <%= @user.username %>
+  
+app/views/users/show.html.erb:2
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 12:59:17 -0600
+Started GET "/auth/google_oauth2/callback?state=c612747b2dff18e9f1ba4b8ce64125e4a808efc4e0845ec1&code=4/sgFwfKLoUg4vVFgm7KujyfdRCndUUo-Os49xAUM-0HR2BDPiVbnpwyrZoXHUiFrJWRk81D7LhUDaSD9e0BUAxLo&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=5fae1b7ac27e21ff0725de1472f99fcb9fde20d6..c8bb&prompt=none" for ::1 at 2019-10-24 12:59:18 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"c612747b2dff18e9f1ba4b8ce64125e4a808efc4e0845ec1", "code"=>"4/sgFwfKLoUg4vVFgm7KujyfdRCndUUo-Os49xAUM-0HR2BDPiVbnpwyrZoXHUiFrJWRk81D7LhUDaSD9e0BUAxLo", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"5fae1b7ac27e21ff0725de1472f99fcb9fde20d6..c8bb", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1 WHERE "users"."id" = $2[0m  [["google_token", "ya29.ImOpB8IUI7_q77LCJhPuBJ7wnLOg-Mfv1Ccw-GULlxn7AwFNXqeoNQzZ1rgTwfM_Ydr9LhZcKdBVuKjKImIFo4P2uD58Rm47mDF-3wdFpab5ruAN2mG-wWbZS_c1zJm_1mjA9Zc"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 19ms (ActiveRecord: 9.8ms | Allocations: 6288)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 12:59:18 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 4768)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 12:59:44 -0600
+Started GET "/auth/google_oauth2/callback?state=0d2024719cd07ae22c95f735ae67a1e443ea0a0e3178ba1d&code=4%2FsgE9LfwQW4onbH3uKD4zgjZETqt9wJNdsMYYeDZpbe6FFieenYZ8a8mIgwYJO-sMyvC-4fqAwQe-55dl3PaNvzA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&session_state=d9ca84f926361498d05684ad788c72366c13ae45..a5ba&prompt=consent" for ::1 at 2019-10-24 13:00:02 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"0d2024719cd07ae22c95f735ae67a1e443ea0a0e3178ba1d", "code"=>"4/sgE9LfwQW4onbH3uKD4zgjZETqt9wJNdsMYYeDZpbe6FFieenYZ8a8mIgwYJO-sMyvC-4fqAwQe-55dl3PaNvzA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "session_state"=>"d9ca84f926361498d05684ad788c72366c13ae45..a5ba", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1, "google_refresh_token" = $2 WHERE "users"."id" = $3[0m  [["google_token", "ya29.Il-pB3KTzyCXFVttcAT9XqR12chzmWpvQw5DItgdTs0hlzcfB8CxQnCb2p63F-fi45d8bn2KVAVmEzEc-RmMDdch1rJGDJ-Iz98X3wIRKo3UJ_ETITP_43yxZS-D9Rv-Kw"], ["google_refresh_token", "1//04m0wqwmcZMA5CgYIARAAGAQSNwF-L9IrGndG4ZmNpTZF4EqFmWOUQP6S5PtX-W_lhFWewP7ZzSA9se5VqqZd1qjQUhJZ1pyBWwE"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:28:in `googleAuth'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms | Allocations: 2851)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 13:00:02 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 4663)
+
+
+Started GET "/profile" for ::1 at 2019-10-24 13:00:29 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 38ms (Views: 29.3ms | ActiveRecord: 2.7ms | Allocations: 8278)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-24 13:00:39 -0600
+Started GET "/auth/google_oauth2/callback?state=08f30abcfb3fecb049616a4a507be5378d42d6c0878ff677&code=4/sgHToU6EXqC58xxUpXQQfK5I1E9rlNQXOPQcTZdRM2CTRCWkM3NBOxYJ7Z-tGmqJLPA-tfntKjekTC6p7qqV5Lk&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=1d0321330effdd2a0f17c7867757d9d81f90cf50..463a&prompt=none" for ::1 at 2019-10-24 13:00:39 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"08f30abcfb3fecb049616a4a507be5378d42d6c0878ff677", "code"=>"4/sgHToU6EXqC58xxUpXQQfK5I1E9rlNQXOPQcTZdRM2CTRCWkM3NBOxYJ7Z-tGmqJLPA-tfntKjekTC6p7qqV5Lk", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"1d0321330effdd2a0f17c7867757d9d81f90cf50..463a", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mackenzie.halliday@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:6:in `from_omniauth'
+Completed 500 Internal Server Error in 85294ms (ActiveRecord: 0.4ms | Allocations: 159329)
+
+
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+app/controllers/sessions_controller.rb:18:in `googleAuth'
