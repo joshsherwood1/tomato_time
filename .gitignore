@@ -9,6 +9,7 @@
 coverage
 
 # Ignore all logfiles and tempfiles.
+/log/development.log
 /config/application.yml
 /log/*
 /tmp/*
