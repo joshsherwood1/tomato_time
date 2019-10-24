@@ -11,6 +11,6 @@ describe 'A registered user' do
     expect(page).to have_content("Number of Games Played")
     expect(page).to have_content("Number of Games Won")
     expect(page).to have_content("Number of Correctly Answered Questions")
-    expect(page).to have_content("You are logged in as JoshSherwood1")
+    expect(page).to have_content("JoshSherwood1")
   end
 end
