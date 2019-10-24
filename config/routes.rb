@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/register", to: "users#new"
 
+
   # Routes for Google authentication
   get "/auth/:provider/callback", to: "sessions#googleAuth"
   get "/auth/failure", to: redirect("/")
-
   get "/profile", to: "users#show"
 end
