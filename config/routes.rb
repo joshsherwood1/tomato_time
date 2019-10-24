@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/register", to: "users#new"
-  post "/register", to: "users#create"
+
+
+  # Routes for Google authentication
+  get "/auth/:provider/callback", to: "sessions#googleAuth"
+  get "/auth/failure", to: redirect("/")
   get "/profile", to: "users#show"
 end
