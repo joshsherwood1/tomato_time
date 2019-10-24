@@ -25,11 +25,18 @@
        <ul class="navbar-nav">
          <% if current_user.nil? %>
             <a class="nav-item nav-link active" href="/auth/google_oauth2">Login/Register with Google</a>
+          <% else %>
+            <a class="nav-item nav-link active" href="/logout">Logout</a>
          <% end %>
        </ul>
      </div>
    </nav>
   </topnav>
+    <% flash.each do |name, msg| %>
+      <div class= "<%=name%>-flash">
+        <p><%= msg %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
