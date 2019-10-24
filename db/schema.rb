@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_223614) do
     t.string "category"
     t.string "number_of_questions"
     t.string "difficulty"
+    t.string "custom_name"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_games_on_user_id"
   end
