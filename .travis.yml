@@ -16,3 +16,8 @@ script:
 services:
   - redis-server
   - postgresql
+
+# deploy:
+#   provider: heroku
+#   api_key:
+#   app: blooming-reef-34254

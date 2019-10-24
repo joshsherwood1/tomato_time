@@ -5,4 +5,8 @@ describe User do
     it { should validate_presence_of :username }
     it { should validate_presence_of :email }
   end
+
+  describe "relationships" do
+      it { should have_many :games }
+  end
 end
