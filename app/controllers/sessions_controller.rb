@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
   end
 
   def googleAuth
-
     # Get access tokens from the google server
     access_token = request.env["omniauth.auth"]
     user = User.from_omniauth(access_token)
@@ -28,5 +27,12 @@ class SessionsController < ApplicationController
     user.save
 
     redirect_to "/profile"
+  end
+
+  def destroy
+    session.delete(:user_id)
+    current_user = nil
+    redirect_to root_path
+    flash[:success] = "You have been logged out! Come play again soon!"
   end
 end
