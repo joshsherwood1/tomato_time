@@ -21,3 +21,6 @@ coverage
 .log
 public
 log
+
+# Ignore application configuration
+/config/application.yml
