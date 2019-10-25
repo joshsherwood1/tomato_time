@@ -5,10 +5,15 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "/logout", to: "sessions#destroy"
   get "/register", to: "users#new"
+  resources :games, only: [:new, :create]
 
 
   # Routes for Google authentication
   get "/auth/:provider/callback", to: "sessions#googleAuth"
   get "/auth/failure", to: redirect("/")
   get "/profile", to: "users#show"
+
+
+  resources :games, only:[:index, :destroy]
+
 end
