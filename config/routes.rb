@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   get "/auth/failure", to: redirect("/")
   get "/profile", to: "users#show"
 
-  resources :games, only:[:index]
+
+  resources :games, only:[:index, :destroy]
+
 end

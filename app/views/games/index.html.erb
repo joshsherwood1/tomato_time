@@ -26,9 +26,8 @@
                     <td><%= game.difficulty %></td>
                     <td><%= game.number_of_questions %></td>
                     <td>
-                        <p><%= button_to "Start Game"%></p>
-                        <p><%= button_to "Delete", method: :delete %></p>
-                    </td>
+                      <p><%= button_to "Start Game"%></p>
+                      <p><%= button_to "Delete", game_path(id: game.id), method: :delete%></p>
                   </tr>
               </section>
             <% end %>
