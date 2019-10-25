@@ -1620,3 +1620,111 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 14843)
 
 
+Started GET "/" for ::1 at 2019-10-25 16:17:48 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 206)
+Completed 200 OK in 1452ms (Views: 1446.6ms | ActiveRecord: 0.0ms | Allocations: 1380692)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-25 16:17:52 -0600
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-25 16:17:52 -0600
+Started GET "/auth/google_oauth2/callback?state=ea3a1622da7b87d0827405d0ebad6ea92bdb78810c1d46dd&code=4/sgFf5YMwim0QdWKXlQ-h4dB_yi8jCQ30dv_N52EuqUgRKS2E7QJ435Os69zxkbtpp6ZDqJ00JNmKY0ucNbmIDgE&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&session_state=7a283621d6aecaae9567aa8c48c1ea26fd8dc03e..d3a2&prompt=none" for ::1 at 2019-10-25 16:17:52 -0600
+Processing by SessionsController#googleAuth as HTML
+  Parameters: {"state"=>"ea3a1622da7b87d0827405d0ebad6ea92bdb78810c1d46dd", "code"=>"4/sgFf5YMwim0QdWKXlQ-h4dB_yi8jCQ30dv_N52EuqUgRKS2E7QJ435Os69zxkbtpp6ZDqJ00JNmKY0ucNbmIDgE", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "session_state"=>"7a283621d6aecaae9567aa8c48c1ea26fd8dc03e..d3a2", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jkjgsherwood@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:5:in `from_omniauth'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "google_token" = $1 WHERE "users"."id" = $2[0m  [["google_token", "ya29.ImSpB5MgYx9pBfJxzr4epGtgJ5Cfc-CJN1nplb39R9l6uHYjFwqsn8U523ZZGB0RproefXAV-t-rysb8krC7I94zXIMxvoFlk-ccynQtxw1xbtG8x0eCowPVxfqn6gAr0_yKNebg"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:27:in `googleAuth'
+Redirected to http://localhost:3000/games
+Completed 302 Found in 226ms (ActiveRecord: 153.1ms | Allocations: 8090)
+
+
+Started GET "/games" for ::1 at 2019-10-25 16:17:53 -0600
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "games" WHERE "games"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/games/index.html.erb:7
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/games/index.html.erb:21
+  Rendered games/index.html.erb within layouts/application (Duration: 38.3ms | Allocations: 8818)
+Completed 200 OK in 145ms (Views: 47.2ms | ActiveRecord: 6.2ms | Allocations: 25905)
+
+
+Started POST "/games" for ::1 at 2019-10-25 16:17:55 -0600
+Processing by GamesController#create as HTML
+  Parameters: {"authenticity_token"=>"k3/v34pikQSX/0HRVaUvMARKgwMa6eWrKN8eULDqX3Gz+v+wfpY8rbSi4IMTefcXSyY7xxhEmmTyQpVa2bWiZA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+[31mUnpermitted parameter: :authenticity_token[0m
+Redirected to http://localhost:3000/games/new
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms | Allocations: 6747)
+
+
+Started GET "/games/new" for ::1 at 2019-10-25 16:17:55 -0600
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1510)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 15686)
+
+
+Started POST "/games" for ::1 at 2019-10-25 16:18:04 -0600
+Processing by GamesController#create as HTML
+  Parameters: {"authenticity_token"=>"a5nC+pUjDxwxZs4tCBOEOrunmXJQ5ABdgHMcckHexkZLHNKVYdeitRI7b39Oz1wd9MshtlJJf5Ja7pd4KIE7Uw==", "custom_name"=>"Antoher one", "number_of_questions"=>"6", "category"=>"Science & Nature", "difficulty"=>"medium", "commit"=>"Create Game"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/games_controller.rb:12:in `create'
+  [1m[36mGame Create (9.4ms)[0m  [1m[32mINSERT INTO "games" ("category", "number_of_questions", "difficulty", "custom_name", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category", "Science & Nature"], ["number_of_questions", "6"], ["difficulty", "medium"], ["custom_name", "Antoher one"], ["user_id", 1]]
+  ↳ app/controllers/games_controller.rb:12:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/games_controller.rb:12:in `create'
+Redirected to http://localhost:3000/games
+Completed 302 Found in 25ms (ActiveRecord: 13.8ms | Allocations: 3703)
+
+
+Started GET "/games" for ::1 at 2019-10-25 16:18:04 -0600
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "games" WHERE "games"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/games/index.html.erb:7
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/games/index.html.erb:21
+  Rendered games/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3158)
+Completed 200 OK in 43ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 17451)
+
+
+Started GET "/profile" for ::1 at 2019-10-25 16:18:08 -0600
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 122)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 15002)
+
+
+Started GET "/logout" for ::1 at 2019-10-25 16:18:20 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/" for ::1 at 2019-10-25 16:18:20 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 13758)
+
+
