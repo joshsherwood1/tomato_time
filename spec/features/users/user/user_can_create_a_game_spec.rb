@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'A registered user' do
-  it 'can see all tutorials marked for both classroom and non-classroom purposes' do
+  it 'can create a new game' do
     user = User.create!(username: "JoshSherwood1", email: "email@email.com", google_token: "yadayada")
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -18,15 +18,15 @@ describe 'A registered user' do
 
     expect(current_path).to eq("/games")
     expect(page).to have_content("Movies")
-    expect(page).to have_content("easy")
-    expect(page).to have_content("1")
+    expect(page).to have_content("medium")
+    expect(page).to have_content("2")
     expect(page).to have_content(name)
 
     game = Game.last
     expect(game.custom_name).to eq(name)
     expect(game.category).to eq("Movies")
-    expect(game.difficulty).to eq("easy")
-    expect(game.number_of_questions).to eq("1")
+    expect(game.difficulty).to eq("medium")
+    expect(game.number_of_questions).to eq("2")
 
   end
 end

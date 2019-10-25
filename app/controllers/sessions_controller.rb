@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
 
     user.save
 
-    redirect_to "/profile"
+    redirect_to games_path
   end
 
   def destroy

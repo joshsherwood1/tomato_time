@@ -21,15 +21,19 @@
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
+
      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
        <ul class="navbar-nav">
          <% if current_user.nil? %>
             <a class="nav-item nav-link active" href="/auth/google_oauth2">Login/Register with Google</a>
           <% else %>
-            <a class="nav-item nav-link active" href="/logout">Logout</a>
+            <a class="nav-item nav-link active" style="text-align: right" href="/games">My Games</a>
+            <a class="nav-item nav-link active" style="text-align: right" href="/profile">Profile</a>
+            <a class="nav-item nav-link active" style="text-align: right" href="/logout">Logout</a>
          <% end %>
        </ul>
      </div>
+
    </nav>
   </topnav>
     <% flash.each do |name, msg| %>

@@ -1,7 +1,11 @@
 class GamesController < ApplicationController
 
   def new
+  end
 
+  def index
+    @games = current_user.games
+    @user = current_user
   end
 
   def create
@@ -14,20 +18,16 @@ class GamesController < ApplicationController
       redirect_to "/games/new"
     end
   end
-  
+
   def destroy
     game = Game.find(params[:id])
     game.destroy
     redirect_to games_path
   end
-  
-   private
+
+  private
 
   def game_params
     params.permit(:custom_name, :number_of_questions, :category, :difficulty)
-  def index
-    @games = current_user.games
-    @user = current_user
   end
-
 end
